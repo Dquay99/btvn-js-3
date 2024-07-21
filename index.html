@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Duong Quoc Anh</h1>
+    <h2><span id="minn">10</span>:<span id="secc">00</span></h2>
+    <script type="text/javascript">
+        
+        var min = 10;
+        var sec = 0;
+        var cd = setInterval(time,1000);
+        function time() {
+            var minn = document.getElementById('minn');
+            var secc = document.getElementById('secc');
+            minn.innerText = min>=10 ? min:`0${min}`; 
+            secc.innerText = sec>=10 ? sec:`0${sec}`; 
+            sec--;
+            if (sec < 0 ){
+                sec = 59;
+                min--;
+            }
+            if (min <0) {
+                clearInterval(cd)
+            }
+        } 
+      
+
+    </script>
+</body>
+
+</html>
